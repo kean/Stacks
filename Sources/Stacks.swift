@@ -89,8 +89,6 @@ private final class Spacer: UIView {
     }
 
     fileprivate override func updateConstraints() {
-        super.updateConstraints()
-
         NSLayoutConstraint.deactivate(_constraints)
 
         let attributes: [NSLayoutConstraint.Attribute]
@@ -106,6 +104,8 @@ private final class Spacer: UIView {
         }
 
         NSLayoutConstraint.activate(_constraints)
+        
+        super.updateConstraints()
     }
 }
 
